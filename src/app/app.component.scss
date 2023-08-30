@@ -1,10 +1,10 @@
-@import '../shared/scss/breakpoints';
+@import 'shared/scss/breakpoints';
 
 header {
   text-align: center;
   margin-inline: auto;
   font-size: clamp(68px, 130px, 20vw);
-  color: #f6f3ef;
+  color: #dbd8d4;
 
   @media (min-width: $breakpoint-md) {
   }
@@ -42,3 +42,4 @@ p {
     font-size: clamp(.15em, 28px, .6em);
   }
 }
+
