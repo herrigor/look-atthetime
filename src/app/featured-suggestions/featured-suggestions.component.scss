@@ -1,0 +1,19 @@
+h2 {
+  font-size: 20px;
+}
+
+.movie-card {
+  position: relative;
+}
+.movie-description {
+  margin-top: 1em;
+}
+.synopsis {
+  font-family: 'Fira Sans Condensed', serif;
+  font-size: .85em;
+  font-style: italic;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+}

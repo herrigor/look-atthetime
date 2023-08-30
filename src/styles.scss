@@ -1,9 +1,12 @@
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
 html, body {
   height: 100%;
 }
 body {
   position: relative;
-  font-size: 24px;
+  font-size: 16px;
   font-family: 'Signika Negative', sans-serif;
   background: #1d1334;
   color: #f6f3ef;
@@ -14,9 +17,11 @@ a {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+
+  width: 100%;
   text-align: right;
 }

@@ -1,3 +1,16 @@
-<ul>
-  <li></li>
-</ul>
+<div class="container">
+  <ul class="list-unstyled row" data-bs-theme="dark">
+
+    <li *ngFor="let item of movies" class="movie-card col col-md-4 col-xl-3">
+      <h2>{{item.title}}<br> &rsaquo; {{item.time}}min</h2>
+      <img src="{{item.poster}}" alt="">
+
+      <div class="movie-description">
+        <p class="synopsis">{{item.synopsis}}</p>
+        <p class="">You will sleep by 00h15</p>
+        <a href="#" class="btn btn-primary">Where to watch?</a>
+      </div>
+    </li>
+
+  </ul>
+</div>

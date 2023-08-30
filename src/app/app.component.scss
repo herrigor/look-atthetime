@@ -2,7 +2,7 @@
 
 header {
   text-align: center;
-  margin-inline: auto;
+  margin: 0 auto .6em;
   font-size: clamp(68px, 130px, 20vw);
   color: #dbd8d4;
 
@@ -16,7 +16,7 @@ h1 {
   font-family: 'Tilt Warp', cursive;
   font-weight: 900;
   margin-bottom: -.05em;
-  padding-bottom: 0;
+  padding-block: 1em 0;
 
   span {
     display: block;
@@ -28,7 +28,7 @@ h1 {
     @media (min-width: $breakpoint-lg) {
       display: inline;
       font-size: 1em;
-      margin-left: .2em;
+      padding-left: .2em;
     }
   }
 }
