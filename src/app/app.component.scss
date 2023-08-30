@@ -1,26 +1,44 @@
-:host{
-}
+@import '../shared/scss/breakpoints';
+
 header {
   text-align: center;
   margin-inline: auto;
-  font-size: 130px;
+  font-size: clamp(68px, 130px, 20vw);
   color: #f6f3ef;
+
+  @media (min-width: $breakpoint-md) {
+  }
 }
+
 h1 {
   font-size: 1em;
+  line-height: 1;
   font-family: 'Tilt Warp', cursive;
   font-weight: 900;
-  margin-bottom: -.25em;
+  margin-bottom: -.05em;
   padding-bottom: 0;
-  // font-family: 'Akatab', sans-serif;
-  // font-family: 'Fira Sans', sans-serif;
-  // font-family: 'Lilita One', cursive;
-  // font-family: 'Oswald', sans-serif;
-  // font-family: 'Roboto', sans-serif;
-  // font-family: 'Rowdies', cursive;
-  // font-family: 'Signika Negative', sans-serif;
+
+  span {
+    display: block;
+    font-size: .6em;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+    @media (min-width: $breakpoint-lg) {
+      display: inline;
+      font-size: 1em;
+      margin-left: .2em;
+    }
+  }
 }
+
 p {
-  font-family: sans-serif;
-  font-size: .2em;
+  font-size: 22px;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 400;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: clamp(.15em, 28px, .6em);
+  }
 }
