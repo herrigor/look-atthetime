@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Movie } from '../shared/services/api/api.models';
+import { Movie, TMDBFullMovie } from '../shared/services/api/api.models';
+import { Observable, Subject, catchError, of } from 'rxjs';
+import { ApiService } from '../shared/services/api/api.service';
 
 @Component({
   selector: 'app-featured-suggestions',
@@ -7,6 +9,7 @@ import { Movie } from '../shared/services/api/api.models';
   styleUrls: ['./featured-suggestions.component.scss']
 })
 export class FeaturedSuggestionsComponent {
+  movies$ = new Observable<TMDBFullMovie[]>();
   movies: Movie[] = [
     {
       title: 'Fresh Prince of Bel-Air',
@@ -38,4 +41,7 @@ export class FeaturedSuggestionsComponent {
     }
   ];
 
+  constructor(private apiService: ApiService){
+    this.movies$ = this.apiService.getMovies()
+  }
 }

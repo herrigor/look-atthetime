@@ -1,5 +1,9 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@import 'app/shared/scss/colors';
+
+$enable-negative-margins: true;
+
 
 html, body {
   height: 100%;
@@ -9,12 +13,12 @@ body {
   font-size: 16px;
   font-family: 'Signika Negative', sans-serif;
   font-weight: 400;
-  background: #1d1334;
-  color: #f6f3ef;
+  background: $background-color;
+  color: $body-color;
 }
 
 a {
-  color: #1c69c2;
+  color: $link-color;
 }
 
 footer {

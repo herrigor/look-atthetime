@@ -1,14 +1,14 @@
 <div class="container">
-  <ul class="list-unstyled row" data-bs-theme="dark">
+  <ul class="list-unstyled row" data-bs-theme="dark" *ngIf="(movies$ | async) as movies">
 
-    <li *ngFor="let item of movies" class="movie-card col col-md-4 col-xl-3">
-      <h2>{{item.title}}<br> &rsaquo; {{item.time}}min</h2>
-      <img src="{{item.poster}}" alt="">
+    <li *ngFor="let movie of movies" class="movie-card col col-md-4 col-xl-3">
+      <h2>{{ movie.original_title }} <small>({{ movie.release_date | date: 'yyyy' }})</small><br> &rsaquo; {{ movie.runtime }}min</h2>
+      <img src="{{ movie.poster_path }}" alt="">
 
       <div class="movie-description">
-        <p class="synopsis">{{item.synopsis}}</p>
-        <p class="runtime">You will sleep by <strong>{{ item.time | endtime }}</strong></p>
-        <a href="{{ item | watch }}" class="btn btn-primary" target="_blank">Where to watch?</a>
+        <p class="synopsis">{{ movie.overview | truncate : 180 }}</p>
+        <p class="runtime">You will sleep by <strong>{{ movie.runtime | endtime }}</strong></p>
+        <a href="{{ movie | watch }}" class="btn btn-primary" target="_blank">Where to watch?</a>
       </div>
     </li>
 

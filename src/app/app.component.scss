@@ -5,10 +5,11 @@ header {
   text-align: center;
   margin: 0 auto 30px;
   font-size: clamp(68px, 130px, 20vw);
-  color: #dbd8d4;
+  color: $header-color;
 
-  p {
+  .byline {
     font-size: 22px;
+    margin-top: .6em;
   }
 }
 

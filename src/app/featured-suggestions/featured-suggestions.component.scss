@@ -2,6 +2,10 @@
 
 h2 {
   font-size: 20px;
+
+  small {
+    color: $muted-accent-color;
+  }
 }
 
 .movie-card {
@@ -28,7 +32,7 @@ h2 {
 }
 
 img {
-  background: #151515;
+  background: $poster-bg-color;
   width: 100%;
   min-height: 320px;
   aspect-ratio: 1/1.4;

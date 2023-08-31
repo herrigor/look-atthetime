@@ -1,0 +1,14 @@
+<select
+  name="genre"
+  id="genre"
+  (change)="onChange($event)"
+  class="form-select d-inline-block w-auto"
+>
+  <option selected disabled value="">...</option>
+  <option
+    *ngFor="let genre of genres;"
+    value="{{ genre.value.join(',') }}"
+  >
+    {{ genre.label }}
+  </option>
+</select>
