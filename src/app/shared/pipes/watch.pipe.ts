@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Movie } from './services/api/tmdb.enums';
+import { Movie } from '../services/api/api.models';
 
 @Pipe({
   name: 'watch'
