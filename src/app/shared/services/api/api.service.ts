@@ -35,7 +35,7 @@ export class ApiService {
   fetchGenre(url: string) {
     return this.http.get<TMDBSearch>(url).pipe(
       map(response => response.results),
-      map((result: TMDBMovie[]) => result.filter((movie, i) => i < 5).map(movie =>  movie.id)),
+      map((result: TMDBMovie[]) => result.filter((movie, i) => i < 7).map(movie =>  movie.id)),
     )
   }
 
