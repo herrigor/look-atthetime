@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { API_URL, TMDBFullMovie, TMDBMovie, TMDBSearch } from './api.models';
-import { Observable, Subject, catchError, concat, concatMap, forkJoin, from, map, mergeMap, of, switchMap, tap } from 'rxjs';
+import { API_KEY, API_URL, TMDBFullMovie, TMDBMovie, TMDBSearch } from './api.models';
+import { Observable, Subject, forkJoin, map, switchMap, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -14,8 +14,8 @@ export class ApiService {
   movieDetailsURL = `${API_URL}/movie/{id}?api_key={api_key}`
 
   constructor(private http: HttpClient) {
-    this.movieDiscoveryURL = this.movieDiscoveryURL.replace('{api_key}', '8695cd3c51528df2ac19b3f5122e356c')
-    this.movieDetailsURL = this.movieDetailsURL.replace('{api_key}', '8695cd3c51528df2ac19b3f5122e356c')
+    this.movieDiscoveryURL = this.movieDiscoveryURL.replace('{api_key}', `${API_KEY}`)
+    this.movieDetailsURL = this.movieDetailsURL.replace('{api_key}', `${API_KEY}`)
 
     this.searchResult$ = this.search$.pipe(
       map(genres => `${this.movieDiscoveryURL}&with_genres=${genres}`),

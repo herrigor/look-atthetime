@@ -1,10 +1,20 @@
-# LookAtthetime
+# Oh my! Look at the time
+Be it a comedy or a adventure flick before bed just to have that feelgood sensation to have a good night's sleep is comforting, but we don't want to ruin it all for your future self.
+You probably have been caught in this time-old conundrum. You need to wake up early but the streaming service is already on and one more movie to watch couldn't hurt, could it?
+Ok, it may not be a time-old problem, but is quite offputing to know you just may wake up with the wrong foot the next day.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+This project was generated with Angular 16.1.3 :)
 
-## Development server
+## Setting up
+For the api key you'll need to register in The Movie Database and request a key at [https://www.themoviedb.org/settings/api](themoviedb.org/settings/api), fill in some info and you're good to go. Kinda.
+Create a `.env` file at the root of the project, grab your key and paste it in.
+```bash
+TMDB_API_KEY=abunchofcharactersgoeshere
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server and avigate to `http://localhost:4200/`.
+
+
 
 ## Code scaffolding
 

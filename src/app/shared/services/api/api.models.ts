@@ -1,3 +1,5 @@
+import { environment } from "src/environments/environment.prod";
+
 export enum MovieGenres {
   Action = 28,
   Adventure = 12,
@@ -98,5 +100,5 @@ export enum OriginalLanguage {
   Es = "es",
 }
 
-
 export const API_URL = 'https://api.themoviedb.org/3'
+export const API_KEY = environment.TMDB_API_KEY
