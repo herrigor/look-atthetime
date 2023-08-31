@@ -1,0 +1,45 @@
+@import '../shared/scss/breakpoints';
+@import '../shared/scss/colors';
+
+header {
+  text-align: center;
+  margin: 0 auto 30px;
+  font-size: clamp(68px, 130px, 20vw);
+  color: $header-color;
+
+  .byline {
+    font-size: 22px;
+    margin-top: .6em;
+  }
+}
+
+h1 {
+  font-size: 1em;
+  line-height: 1;
+  font-family: 'Tilt Warp', cursive;
+  font-weight: 900;
+  margin-bottom: -.05em;
+  padding-block: 1em 0;
+
+  span {
+    display: block;
+    font-size: .6em;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+    @media (min-width: $breakpoint-lg) {
+      display: inline;
+      font-size: 1em;
+      padding-left: .2em;
+    }
+  }
+}
+
+p {
+  strong {
+    font-weight: 900;
+    color: $accent-color;
+  }
+}
+

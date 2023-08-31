@@ -10,6 +10,7 @@ import { EndtimePipe } from './shared/pipes/endtime.pipe';
 import { WatchPipe } from './shared/pipes/watch.pipe';
 import { GenreSelectorComponent } from './genre-selector/genre-selector.component';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TruncatePipe } from './shared/pipes/truncate.pipe';
     EndtimePipe,
     WatchPipe,
     GenreSelectorComponent,
-    TruncatePipe
+    TruncatePipe,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
