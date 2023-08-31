@@ -7,8 +7,8 @@
 
       <div class="movie-description">
         <p class="synopsis">{{item.synopsis}}</p>
-        <p class="">You will sleep by 00h15</p>
-        <a href="#" class="btn btn-primary">Where to watch?</a>
+        <p class="runtime">You will sleep by <strong>{{ item.time | endtime }}</strong></p>
+        <a href="{{ item | watch }}" class="btn btn-primary" target="_blank">Where to watch?</a>
       </div>
     </li>
 

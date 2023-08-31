@@ -1,19 +1,36 @@
+@import '../shared/scss/colors';
+
 h2 {
   font-size: 20px;
 }
 
 .movie-card {
   position: relative;
+  margin: 30px auto;
 }
 .movie-description {
   margin-top: 1em;
 }
+.runtime {
+  font-weight: 300;
+
+  strong {
+    font-weight: 500;
+    color: $accent-color;
+  }
+}
+
 .synopsis {
   font-family: 'Fira Sans Condensed', serif;
   font-size: .85em;
   font-style: italic;
+  min-height: 16ch;
 }
+
 img {
-  object-fit: cover;
+  background: #151515;
   width: 100%;
+  min-height: 320px;
+  aspect-ratio: 1/1.4;
+  object-fit: cover;
 }

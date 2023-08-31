@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeaturedSuggestionsComponent } from './featured-suggestions/featured-suggestions.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EndtimePipe } from './shared/pipes/endtime.pipe';
+import { WatchPipe } from './shared/pipes/watch.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FeaturedSuggestionsComponent
+    FeaturedSuggestionsComponent,
+    EndtimePipe,
+    WatchPipe
   ],
   imports: [
     BrowserModule,
